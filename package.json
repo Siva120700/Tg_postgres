@@ -1,0 +1,15 @@
+{
+  "name": "your-app",
+  "version": "1.0.0",
+  "description": "Node.js app with PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1",
+    "pg": "^8.13.0"
+  }
+}
