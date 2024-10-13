@@ -7,13 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-const { Client } = require('pg'); 
 // Connect to PostgreSQL
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false, 
+    rejectUnauthorized: false,
   },
 });
 
@@ -24,8 +22,6 @@ client.connect()
   .catch((error) => {
     console.error('Error connecting to PostgreSQL:', error);
   });
-
-
 
 // Route to save user (from Google Sign-In)
 app.post('/api/saveUser', async (req, res) => {
